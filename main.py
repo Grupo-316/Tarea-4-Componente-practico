@@ -40,3 +40,15 @@ class EntidadBase(ABC):
     @abstractmethod
     def descuento(self):
         pass
+
+    @abstractmethod
+    def validar_datos(self):
+        pass
+
+    @abstractmethod
+    def registrar_cliente(self):
+        pass
+
+    @abstractmethod
+    def mostrar_informacion(self):
+        pass
