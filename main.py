@@ -61,6 +61,8 @@ class Cliente(EntidadBase):
         self.__documento = documento
         self.__correo = correo
 
+    # Validacion de los datos del cliente
+
     def validar_datos(self):
         if not self.__nombre or not self.__documento or not self.__correo:
             raise ValueError("Todos los campos son obligatorios.")
@@ -72,6 +74,8 @@ class Cliente(EntidadBase):
         except ValueError:
             raise ValueError("Documento de identidad debe ser numérico.")
 
+    # Validadcion de los datos del cliente
+
     def registrar_cliente(self):
 
         self.input_nombre = input("Ingrese el nombre del cliente: ")
@@ -81,6 +85,8 @@ class Cliente(EntidadBase):
         self.__documento = self.input_documento
         self.__correo = self.input_correo
         return self.input_nombre, self.input_documento, self.input_correo
+
+    # Mostrar la informacion del cliente
 
     def mostrar_informacion(self):
         return f"Nombre: {self.__nombre}, Documento: {self.__documento}, Correo: {self.__correo}"
