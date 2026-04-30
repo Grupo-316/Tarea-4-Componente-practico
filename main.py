@@ -81,3 +81,6 @@ class Cliente(EntidadBase):
         self.__documento = self.input_documento
         self.__correo = self.input_correo
         return self.input_nombre, self.input_documento, self.input_correo
+
+    def mostrar_informacion(self):
+        return f"Nombre: {self.__nombre}, Documento: {self.__documento}, Correo: {self.__correo}"
