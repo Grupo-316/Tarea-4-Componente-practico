@@ -52,3 +52,11 @@ class EntidadBase(ABC):
     @abstractmethod
     def mostrar_informacion(self):
         pass
+
+
+# Clase Cliente
+class Cliente(EntidadBase):
+    def __init__(self, nombre, documento, correo):
+        self.__nombre = nombre
+        self.__documento = documento
+        self.__correo = correo
