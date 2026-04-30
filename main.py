@@ -71,3 +71,13 @@ class Cliente(EntidadBase):
             int(self.__documento) and len(self.__documento) <= 10
         except ValueError:
             raise ValueError("Documento de identidad debe ser numérico.")
+
+    def registrar_cliente(self):
+
+        self.input_nombre = input("Ingrese el nombre del cliente: ")
+        self.input_documento = input("Ingrese el documento de identidad del cliente: ")
+        self.input_correo = input("Ingrese el correo electrónico del cliente: ")
+        self.__nombre = self.input_nombre
+        self.__documento = self.input_documento
+        self.__correo = self.input_correo
+        return self.input_nombre, self.input_documento, self.input_correo
