@@ -60,3 +60,14 @@ class Cliente(EntidadBase):
         self.__nombre = nombre
         self.__documento = documento
         self.__correo = correo
+
+    def validar_datos(self):
+        if not self.__nombre or not self.__documento or not self.__correo:
+            raise ValueError("Todos los campos son obligatorios.")
+        if "@" not in self.__correo:
+            raise ValueError("Correo electrónico no válido.")
+
+        try:
+            int(self.__documento) and len(self.__documento) <= 10
+        except ValueError:
+            raise ValueError("Documento de identidad debe ser numérico.")
